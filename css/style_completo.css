@@ -1,0 +1,531 @@
+/*
+Theme Name: apu314v1
+Theme URI: http://www.apu314.com
+Description: Web de apu314. Todos los derechos reservados.
+Author: apu314 - Adolfo Unturbe
+Author URI: http://apu314.com
+Version: 2.0
+*/
+
+@import url(css/normalize.css);
+
+/*------------------------------------*\
+    $ClearFix
+\*------------------------------------*/
+.cf::before,
+.cf::after {
+    content: " ";
+    display: table;
+}
+.cf::after {
+    clear: both;
+}
+/*Para IE 6/7 únicamente*/
+.cf {
+    *zoom: 1;
+}
+
+/*------------------------------------*\
+    $Header-Principal
+\*------------------------------------*/
+
+.cabecera {
+	position: relative;
+	/*background-color: #2c3e50;*/
+	background-color: @colorbg__cabecera;
+	overflow: hidden; 
+	margin-bottom: 20px;
+	width: 100%;
+	/* height: 52px; */
+	max-height: 52px;
+	-webkit-transition: all 1.6s linear;
+	     -o-transition: all 1.6s linear;
+	        transition: all 1.6s linear;
+}
+
+.main-logo {
+	/* display: inline-block; */
+	display: block;
+	float: left;
+
+	position: relative;
+	color: #e74c3c;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	height: 52px;
+}
+
+.main-logo h1 {
+	margin: 0;
+	padding: 0;
+	height: 52px;
+	line-height: 52px;
+}
+
+.main-logo a {
+	font-weight: bold;
+	text-decoration: none;
+	height: 100%;
+}
+
+.cabecera nav {
+	display: block;
+	background-color: #2c3e50;
+	/*overflow: hidden;*/ 
+	/*position: relative;*/
+	margin: 0;
+	/*height: 52px;*/
+	/*width: 200px;*/
+}
+
+.cabecera ul {
+	display: block;
+	clear: both;
+	background-color: #4a5e72;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+}
+
+.cabecera ul li {
+	display: block;
+	/*float: left;*/
+	height: 100%;
+	/* width: 50%;
+	float: left; */
+	line-height: 52px;
+}
+.cabecera ul li:hover {
+	background-color: rgba(102, 205, 170, .92);
+}
+
+.cabecera li a {
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-bottom: 5px;
+	width: 100%;
+	height: 100%;
+}
+.cabecera li a:hover {
+	height: 100%;
+}
+
+.menu-login {
+	display: block;
+	/* overflow: hidden; */
+	position: relative;
+	height: 52px;
+}
+
+.div-login, .div-register {width: 50%; text-align: center;}
+
+.opciones-login {
+	display: block;
+	margin: 0.5em 0;
+	width: 100%;
+
+}
+
+/*------------------------------------*\
+	$Menu
+\*------------------------------------*/
+
+.div-menu {
+  display: inline;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 5%;
+  top: 15px;
+}
+
+.div-menu::before {
+  content: "Menú";
+  color: #FAFAFA;
+  display: inline;
+  position: absolute;
+  right: 100px;
+}
+
+input[name="menu"][type="checkbox"] {display: none;}
+label[name="menu--lbl"] {
+  display: inline-block;
+  background: url(images/nav-icon.png) repeat scroll 0 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu--chkbox:checked ~ .cabecera, .menu--chkbox:checked nav {
+    /* height: 389px; */
+    /* height: auto; */
+    max-height: 1000px;
+}
+
+/*------------------------------------*\
+    $Contenido
+\*------------------------------------*/
+
+.contenedor {
+	display: block;
+	min-height: 1280px;
+	padding: 0 3.8%;
+}
+
+.main-section {
+	display: inline-block;
+	float: left;
+	margin-right: 3.8%;
+	margin-bottom: 20px;
+	width: 65.4%;
+}
+
+.main-article {
+	border-bottom: 3px solid #2c3e50;
+}
+
+.main-aside {
+	display: inline-block;
+	float: none;
+	margin-bottom: 20px;
+	/*padding-left: 25px;*/
+	/*width: 30.75%;*/
+}
+
+.main-aside div {
+	border-bottom: 3px solid #2c3e50;
+}
+
+
+.header-post a {color: #000000;} 
+
+.paginacion {
+	margin-top: 0.8em;
+}
+	.btn-paginacion {
+		background-color: rgba(243, 113, 93, 0.92);
+		border-radius: 3px;
+		margin-right: 5px;
+		padding: 5px;
+		float: left;
+	}
+	.btn-paginacion:hover {
+		background-color: rgba(243, 113, 93, 1);
+	}
+/*------------------------------------*\
+    $Footer
+\*------------------------------------*/
+
+.main-footer {
+	height: 150px;
+	background-color: #2c3e50;
+}
+
+.main-footer section {
+	display: inline-block;
+	float: left;
+}
+
+.main-footer nav {
+	display: inline-block;
+}
+
+.main-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.copyright {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+/*------------------------------------*\
+    $Botones
+\*------------------------------------*/
+
+.boton-iniciarsesion, .boton-registro {
+	position: relative;
+  	display: inline-block;
+  	/* overflow: hidden; */
+  	background-color: rgba(243, 113, 93, 0.92);
+  	color: white;
+  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.17);
+  	white-space: nowrap;
+  	cursor: pointer;
+  	padding: 0 10px 0 10px;
+  	height: 52px;
+  	width: 100%;
+  	line-height: 52px;
+}
+.boton-iniciarsesion:hover {
+	background-color: rgba(243, 113, 93, 1);
+}
+.boton-registro {
+	background-color: rgba(102, 205, 170, .92);
+}
+.boton-registro:hover {
+	background-color: rgba(102, 205, 170, 1)
+}
+.boton-logo {
+	position: relative;
+  	display: inline-block;
+  	/* overflow: hidden; */
+  	background-color: rgba(243, 113, 93, 0.92);
+  	color: white;
+  	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.17);
+  	white-space: nowrap;
+  	cursor: pointer;
+  	padding: 7.4px 10px 0.3em 10px;
+	line-height: 1.2em;
+}
+
+/*------------------------------------*\
+    $Miscelánea
+\*------------------------------------*/
+
+.flota-izquierda {
+	float: left;
+}
+
+.flota-derecha {
+	float: right;
+}
+
+/*------------------------------------*\
+    $Google-plus
+\*------------------------------------*/
+.gplus{
+	display: none;
+}
+
+
+
+/*------------------------------------*\
+    $Media-Query's
+\*------------------------------------*/
+
+@media all and (min-width: 700px) {
+	/*------------------------------------*\
+    	$Header-Principal--700px
+	\*------------------------------------*/
+
+	.cabecera {
+		position: relative;
+		background-color: #2c3e50;
+		/* overflow: hidden; */
+		margin-bottom: 20px;
+		width: 100%;
+		height: 52px;
+	}
+
+	.main-logo {
+		display: inline-block;
+		position: relative;
+		float: left;
+		color: #e74c3c;
+		font-weight: bold;
+		text-align: center;
+		cursor: pointer;
+		height: 52px;
+	}
+
+	.main-logo h1 {
+		margin: 0;
+		padding: 0;
+		height: 52px;
+		line-height: 52px;
+	}
+
+	.main-logo a {
+		font-weight: bold;
+		text-decoration: none;
+		height: 100%;
+	}
+
+	.cabecera nav {
+		display: block;
+		/* overflow: hidden; */
+		position: relative;
+		float: left;
+		margin: 0;
+		height: 52px;
+		width: auto;
+	}
+
+	.cabecera ul {
+		display: inline-block;
+		background-color: #2c3e50;
+		list-style: none;
+		position: relative;
+		top: 0;
+		margin: 0;
+		padding-left: 40px;
+		height: 100%;
+	}
+
+	.cabecera ul li {
+		display:inline-block;
+		float: left;
+		/* overflow: hidden; */
+		height: 100%;
+		width: auto;
+		line-height: 52px;
+	}
+	.cabecera ul li:hover {
+		background-color: rgba(102, 205, 170, .92);
+	}
+
+	.cabecera li a {
+		display: block;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+		padding-left: 6px;
+		padding-right: 6px;
+		padding-bottom: 5px;
+		width: 100%;
+		height: 100%;
+	}
+	.cabecera li a:hover {
+		height: 100%;
+	}
+
+	.menu-login {
+		display: inline-block;
+		position: relative;
+		float: right;
+		height: 52px;
+	}
+	
+	/*------------------------------------*\
+		$Botones--700px o más.
+	\*------------------------------------*/
+	.div-login, .div-register {width: auto;}
+	.boton-iniciarsesion, .boton-registro {width: auto;}
+
+	.opciones-login {
+		display: block;
+		margin: 0.5em 0;
+		width: 100%;
+
+	}
+
+	/*------------------------------------*\
+		$Menu--700px
+	\*------------------------------------*/
+
+	.div-menu {
+	  display: none;
+	  position: absolute;
+	  margin-top: auto;
+	  margin-bottom: auto;
+	  right: 5%;
+	  top: 15px;
+	}
+
+	input[name="menu"][type="checkbox"] {display: none;}
+	label[name="menu--lbl"] {
+	  display: inline-block;
+	  background: url(../images/nav-icon.png) repeat scroll 0 0;
+	  width: 20px;
+	  height: 20px;
+	  cursor: pointer;
+	}
+
+	/*------------------------------------*\
+	    $Contenido--700px
+	\*------------------------------------*/
+
+	.contenedor {
+		display: block;
+		min-height: 1280px;
+		padding: 0 3.8%;
+	}
+
+	.main-section {
+		display: inline-block;
+		float: left;
+		margin-right: 3.8%;
+		margin-bottom: 20px;
+		width: 65.4%;
+	}
+
+	.main-article {
+		border-bottom: 3px solid #2c3e50;
+	}
+
+	.main-aside {
+		display: inline-block;
+		float: none;
+		margin-bottom: 20px;
+		/*padding-left: 25px;*/
+		/*width: 30.75%;*/
+	}
+
+	.main-aside div {
+		border-bottom: 3px solid #2c3e50;
+	}
+
+	/*------------------------------------*\
+	    $Footer--700px
+	\*------------------------------------*/
+
+	.main-footer {
+		height: 150px;
+		background-color: #2c3e50;
+	}
+
+	.main-footer section {
+		display: inline-block;
+		float: left;
+	}
+
+	.main-footer nav {
+		display: inline-block;
+	}
+
+	.main-footer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.copyright {
+		display: inline-block;
+		margin: 0 auto;
+	}
+}
+
+
+@media all and (min-width: 750px) {
+	/*------------------------------------*\
+	    $Contenido--750px
+	\*------------------------------------*/
+
+	.main-section {
+		float: left;
+		margin-bottom: 20px;
+		width: 65.4%;
+	}
+
+	.main-aside {
+		display: inline-block;
+		float: left;
+		margin-bottom: 20px;
+		padding-left: 25px;
+		width: 30.75%;
+	}
+
+	.main-aside div {
+		border-bottom: 3px solid #2c3e50;
+	}
+}
